@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript."
+title: "Biolingo Plant Sensing — Mechanosensory Coupling Analysis"
+type: software
+authors:
+  - family-names: Gloor
+    given-names: Peter A.
+    affiliation: "University of Cologne; MIT; galaxyadvisors AG"
+license: MIT
+repository-code: "https://github.com/pgloor/biolingo-plant-sensing"
+preferred-citation:
+  type: article
+  title: "Mechanosensory Coupling Between Human Cardiac Activity and Plant Bioelectric Potentials: A Naturalistic Self-Study with Spectral Validation"
+  authors:
+    - family-names: Gloor
+      given-names: Peter A.
+  year: 2026
+  notes: "Manuscript under review."

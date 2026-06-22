@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated figures (regenerate by running the scripts)
+*_correlations.png
+*_models.png
+mediation_*.png
+*spectrogram*.png
+
+# Large/raw data — keep the CSV tracked only if intended for release
+# data/*.csv
