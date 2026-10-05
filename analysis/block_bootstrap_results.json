@@ -1,0 +1,52 @@
+{
+ "path_a_valence_to_HR_lag8": {
+  "n_pairs": 83380,
+  "r": 0.07,
+  "n_eff": 356,
+  "p_neff": 0.19,
+  "boot95": [
+   0.006,
+   0.135
+  ]
+ },
+ "path_b_HR_to_Plant2_band2_lag34": {
+  "n_pairs": 42851,
+  "r": -0.025,
+  "n_eff": 693,
+  "p_neff": 0.52,
+  "boot95": [
+   -0.089,
+   0.034
+  ]
+ },
+ "Plant1_detrended_to_valence_detrended_lag25": {
+  "n_pairs": 81365,
+  "r": 0.009,
+  "n_eff": 10331,
+  "p_neff": 0.36,
+  "boot95": [
+   -0.012,
+   0.028
+  ]
+ },
+ "Plant1_CO2_lag0": {
+  "n_pairs": 93369,
+  "r": 0.304,
+  "n_eff": 127,
+  "p_neff": 0.0005,
+  "boot95": [
+   0.24,
+   0.371
+  ]
+ },
+ "VOC_to_valence_lag35": {
+  "n_pairs": 55883,
+  "r": 0.226,
+  "n_eff": 173,
+  "p_neff": 0.0027,
+  "boot95": [
+   0.149,
+   0.298
+  ]
+ }
+}
