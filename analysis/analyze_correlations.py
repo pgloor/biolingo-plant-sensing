@@ -1,3 +1,4 @@
+import os
 """
 Correlation analysis for co2_emotion_log.csv
 ─────────────────────────────────────────────
@@ -242,10 +243,10 @@ heatmap(axes[1], spearman_r, "Spearman ρ")
 
 max_n = int(pearson_n.values.max())
 min_n = int(np.nanmin([pearson_n.loc[a,b] for a in cols for b in cols if a!=b]))
-plt.suptitle(f"CO₂ + Emotion Correlations  (pairwise n: {min_n:,}–{max_n:,})", color="black",
+plt.suptitle(f"Zero-lag correlations of all Study 1 signals  (pairwise n: {min_n:,}–{max_n:,})", color="black",
              fontsize=15, y=1.01)
 plt.tight_layout()
 out = args.file.replace(".csv", "_correlations.png")
 plt.savefig(out, dpi=150, bbox_inches="tight", facecolor=fig.get_facecolor())
 print(f"\nHeatmap saved → {out}")
-plt.show()
+if os.environ.get("MPLBACKEND","").lower()!="agg": plt.show()

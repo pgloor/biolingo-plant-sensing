@@ -319,13 +319,13 @@ def heatmap_ax(ax, pivot, title, cmap, vmin=None, vmax=None):
     cb.ax.tick_params(labelsize=11)
 
 heatmap_ax(axes[0,0], make_grid("indirect"),  "Indirect effect a×b",   "RdBu_r")
-heatmap_ax(axes[0,1], make_grid("r_a"),       f"Path a: {X_label} → CO₂",    "RdBu_r")
-heatmap_ax(axes[0,2], make_grid("r_b"),       f"Path b: CO₂ → {Y_label}",     "RdBu_r")
+heatmap_ax(axes[0,1], make_grid("r_a"),       f"Path a: {X_label} → {MED}",    "RdBu_r")
+heatmap_ax(axes[0,2], make_grid("r_b"),       f"Path b: {MED} → {Y_label}",     "RdBu_r")
 heatmap_ax(axes[1,0], make_grid("r_c"),       "Total effect c",                "RdBu_r")
-heatmap_ax(axes[1,1], make_grid("r_c_prime"), "Direct effect c′ (CO₂ ctrl)",  "RdBu_r")
+heatmap_ax(axes[1,1], make_grid("r_c_prime"), f"Direct effect c′ ({MED} ctrl)",  "RdBu_r")
 heatmap_ax(axes[1,2], make_grid("prop_mediated"), "Proportion mediated",       "RdYlGn", 0, 1)
 
-direction_str = f"{X_label}(t) → CO₂(t+Δa) → {Y_label}(t+Δa+Δb)"
+direction_str = f"{X_label}(t) → {MED}(t+Δa) → {Y_label}(t+Δa+Δb)"
 fig.suptitle(
     f"Lagged Mediation:  {direction_str}\n"
     f"best Δa={int(best.da)}s  Δb={int(best.db)}s  indirect={best.indirect:+.4f}",
@@ -338,4 +338,4 @@ out = os.path.join(os.path.dirname(os.path.abspath(args.file)),
                    os.path.basename(args.file).replace(".csv", suffix))
 plt.savefig(out, dpi=150, bbox_inches="tight", facecolor=fig.get_facecolor())
 print(f"\nPlot saved → {out}")
-plt.show()
+if os.environ.get("MPLBACKEND","").lower()!="agg": plt.show()
